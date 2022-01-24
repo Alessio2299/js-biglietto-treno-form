@@ -6,7 +6,7 @@
 body{
   background-color: rgb(185,	20,	80) !important;
 }
-form{
+.container-form{
   background-color: white;
   box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.342);
 }
