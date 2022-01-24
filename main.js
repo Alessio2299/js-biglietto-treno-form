@@ -40,6 +40,7 @@ generate.addEventListener("click",
       offer.innerHTML ="Biglietto Over";
     } else{
       sale = 0;
+      offer.innerHTML ="Biglietto Standard";
     }
 
     // Calculation Price with sale
