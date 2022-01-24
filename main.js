@@ -4,26 +4,19 @@ let name = document.getElementById("name");
 let km = document.getElementById("km");
 let age = document.getElementById("age");
 
-// Create event button
-let button = document.getElementById("generate");
-
-button.addEventListener("click",
-  function(){
-    alert("My name is" + name.value + km.value + age.value)
-  }
-)
 // Stabilisco Prezzo fisso Km
 let prezzoKm = 0.21;
 
 // Calcolo Prezzo totale senza sconto
-let prezzoTotale = km * prezzoKm;
+let prezzoTotale = km.value * prezzoKm;
+console.log(prezzoTotale);
 
 // Calcolo dello sconto
-let sale = 0;
+let sale;
 
-if(age < 18){
+if(age.value < 18){
   sale = (prezzoTotale / 100) * 20;
-} else if(age > 65){
+} else if(age.value > 65){
   sale = (prezzoTotale /100) * 40;
 } else{
   sale = 0;
@@ -31,3 +24,15 @@ if(age < 18){
 
 // Calcolo Prezzo Scontato
 let salePrice= prezzoTotale - sale;
+
+// Create event button
+let button = document.getElementById("generate");
+let randomNumber = Math.floor( Math.random() * 9);
+console.log(randomNumber);
+button.addEventListener("click",
+  function(){
+    document.querySelector(".details-name").innerHTML += "<span>" + name.value + "</span>";
+    document.querySelector("carriage").innerHTML += "<span>" + randomNumber + "</span>";
+  }
+)
+
