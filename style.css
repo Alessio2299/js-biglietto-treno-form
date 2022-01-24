@@ -34,3 +34,9 @@ body{
 .details-ticket{
   width: 75%;
 }
+.hidden{
+  display: none;
+}
+.visibile{
+  display: block;
+}
